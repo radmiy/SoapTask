@@ -12,9 +12,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class CustomerWebClient {
+public class CustomerClient {
     public static void main(String[] args) throws MalformedURLException {
-        URL url = new URL("http://localhost:1986/wss/customer?wsdl");
+        URL url = new URL("http://localhost:8080/SoapTask/customer?wsdl");
         QName qName = new QName("http://ws.epamlab.by/", "CustomerWebServiceImplService");
         Service service = Service.create(url, qName);
         CustomerWebService customerWebService = service.getPort(CustomerWebService.class);
